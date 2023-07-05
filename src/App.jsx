@@ -5,14 +5,19 @@ import AddTask from "./components/AddTask";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
+  const [error, setError] =useState([])
 
   const [tasks, setTasks] = useState([
   ]);
 
   useEffect(() => { 
     const getTasks = async () =>{
+      try {
       const tasksFromServer = await fetchTasks()
       setTasks(tasksFromServer)
+    } catch(error) {
+      console.log(error)
+    }
     };
 
     getTasks()
