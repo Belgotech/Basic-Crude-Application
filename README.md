@@ -1,3 +1,3 @@
 # Basic-Crud-Application
 
-This is a basic crud appllication built with vite react 
+This is a basic crud appllication built with vite react and json server
