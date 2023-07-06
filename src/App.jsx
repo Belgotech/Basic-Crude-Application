@@ -4,7 +4,7 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
 function App() {
-  const [showAddTask, setShowAddTask] = useState(true);
+  const [showAddTask, setShowAddTask] = useState(false);
   const [error, setError] =useState([])
 
   const [tasks, setTasks] = useState([
@@ -26,15 +26,16 @@ function App() {
 
   // fetch Tasks
   const fetchTasks = async () => {
-      const res = await fetch ('https://localhost:5000/task')
+      const res = await fetch('http://localhost:5000/tasks')
       const data = await res.json()
 
+      console.log((data))
       return data
     };
 
   // Add Task
   const addTask = async (task) => {
-    const res = await fetch('https://localhost:5000/task',{
+    const res = await fetch('http://localhost:5000/task',{
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -51,7 +52,7 @@ function App() {
 
   // Delete Task
   const deleteTask = async (id) => {
-    await fetch(`https://localhost:5000/task/${id}`,{method: 'DELETE'})
+    await fetch(`https://localhost:5000/tasks/${id}`,{method: 'DELETE'})
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
