@@ -19,10 +19,22 @@
       "reminder": false
     },
     {
-      "text": "add",
+      "text": "task",
       "day": "",
-      "reminder": "false",
-      "id": 4
+      "reminder": false,
+      "id": 5
+    },
+    {
+      "text": "todo",
+      "day": "",
+      "reminder": false,
+      "id": 6
+    },
+    {
+      "text": "tasking",
+      "day": "",
+      "reminder": false,
+      "id": 7
     }
   ]
 }
