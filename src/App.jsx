@@ -39,7 +39,7 @@ function App() {
       headers: {
         'Content-type': 'application/json',
       },
-      body: JSON.stringify(task)
+      body: JSON.stringify(task),
     })
 
     const data = await res.json
